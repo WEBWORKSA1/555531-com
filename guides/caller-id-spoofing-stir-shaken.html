@@ -1,0 +1,44 @@
+---
+layout: guide
+title: "Caller ID Spoofing & STIR/SHAKEN: Why Scam Calls Look Local | 555531"
+description: "How scammers fake caller ID — even your own number — what STIR/SHAKEN call authentication does and doesn’t do, and how to protect yourself and your business."
+h1: "Caller-ID spoofing and STIR/SHAKEN, explained"
+crumb: "Spoofing & STIR/SHAKEN"
+tag: "How it works"
+lead: "The number on your screen is a claim, not a fact. Here’s how it gets faked, what carriers now do about it, and why “Spam Likely” sometimes lands on honest businesses."
+date_pub: 2026-11-17
+read: 7
+sources:
+  - name: "FTC — How to stop calls from fake numbers (video & guide)"
+    url: "https://consumer.ftc.gov/media/video-0185-how-stop-calls-fake-numbers"
+  - name: "FCC — Combating spoofed robocalls with caller ID authentication"
+    url: "https://www.fcc.gov/call-authentication"
+  - name: "CRTC — Caller ID authentication (STIR/SHAKEN)"
+    url: "https://crtc.gc.ca/"
+---
+<h2>Why caller ID is so easy to fake</h2>
+<p>Caller ID was designed for a trusted network of a few large phone companies. Internet calling changed that: any VoIP system can insert whatever number it likes in the “from” field, and older networks simply passed it along. Scammers use this to show a local number (“neighbour spoofing”), a bank’s real number, a government agency — or even your own number to provoke curiosity.</p>
+<p>Spoofing isn’t always illegal: a doctor calling from a personal phone may show the clinic’s number. In the US, it becomes illegal when done to defraud, cause harm or wrongfully obtain anything of value.</p>
+<h2>What STIR/SHAKEN does</h2>
+<p>STIR/SHAKEN is a set of standards that lets the carrier originating a call digitally sign it, vouching for the caller’s right to use the number. The receiving carrier checks the signature. Large US voice providers were required to implement it on their IP networks by June 30, 2021, and Canada’s CRTC set the same expectation for Canadian carriers later that year. Signatures carry an attestation level:</p>
+<ul>
+<li><b>A — full:</b> the carrier knows the customer and that they’re authorised to use this number.</li>
+<li><b>B — partial:</b> the carrier knows the customer but can’t confirm the number (e.g. calls from a company switchboard).</li>
+<li><b>C — gateway:</b> the carrier only knows where the call entered its network, often from abroad.</li>
+</ul>
+<p>Your phone may show a checkmark or “Verified” for fully attested calls, and analytics engines use attestation alongside behaviour to label calls “Spam Likely” or “Scam Likely”.</p>
+<h2>What it doesn’t do</h2>
+<ul>
+<li>It doesn’t prove the call is <em>honest</em> — a scammer with a real, properly signed number still gets an “A”.</li>
+<li>It works only on IP networks; calls that cross old copper or some international routes may lose their signature.</li>
+<li>It doesn’t block anything by itself; blocking and labelling are separate decisions by carriers and apps.</li>
+</ul>
+<h2>How to protect yourself</h2>
+<ol>
+<li>Treat caller ID as a hint. If a call claims to be your bank, hang up and call the number on your card.</li>
+<li>Turn on your carrier’s spam labelling and your phone’s unknown-caller filtering.</li>
+<li>Don’t press keys to “opt out” of robocalls — it confirms your number is live.</li>
+<li>If people say <em>you</em> called them, your number is being spoofed. You can’t stop it directly; record a voicemail greeting explaining it, report to your regulator, and know that spoofed numbers typically rotate quickly.</li>
+</ol>
+<h2>For businesses: getting answered</h2>
+<p>If legitimate outbound calls get labelled as spam, ask your provider about full A-level attestation, register your numbers with the major analytics engines, keep call volumes per number sensible, and consider branded caller ID. Our <a href="{{ site.baseurl }}/business.html">Business Phone Desk</a> covers the options, and <a href="{{ site.baseurl }}/get-quote.html">one free request</a> gets you matched with providers who support them.</p>
