@@ -1,0 +1,15 @@
+title: "555531 — The Number Desk"
+description: "Free phone-number tools, scam-call defence and a business phone desk. Inspect any number, check a suspicious call, start your 31-day quiet line."
+lang: en
+plugins:
+  - jekyll-sitemap
+exclude:
+  - README.md
+  - BUILD-PROMPTS.md
+  - RESEARCH.md
+  - LICENSE.md
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
