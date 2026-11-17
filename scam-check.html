@@ -1,0 +1,39 @@
+---
+title: "Scam Call Checker — Was That Call a Scam? Free 60-Second Test | 555531"
+description: "Answer 12 quick questions about a phone call and get a risk score, what to do right now, and where to report it in the US, Canada, UK, Australia or India."
+tools: true
+schema: '{"@context":"https://schema.org","@type":"HowTo","name":"How to check whether a phone call was a scam","step":[{"@type":"HowToStep","name":"Answer the 12 signal questions","text":"Mark yes or no for urgency, payment method, secrecy, threats, codes, impersonation and other signals."},{"@type":"HowToStep","name":"Read your risk score","text":"The gauge weighs the strongest scam signals most heavily."},{"@type":"HowToStep","name":"Follow the next steps and report","text":"Secure your accounts if needed and report the call to the right agency for your country."}]}'
+---
+<section class="page-hero"><div class="wrap">
+<div class="crumbs"><a href="{{ site.baseurl }}/">Home</a> / Scam Call Checker</div>
+<span class="eyebrow">Tool · Scam Check</span>
+<h1>Was that call a scam?</h1>
+<p class="lead">Scammers change numbers every hour but their script barely changes. Answer what happened on the call — not who it claimed to be — and get a clear verdict with next steps.</p>
+<p class="mono muted" id="scNum"></p>
+</div></section>
+<section style="padding-top:6px"><div class="wrap grid g2" style="align-items:start;grid-template-columns:1.3fr .9fr">
+<div class="tool" id="scamCheck">
+<div class="qlist" id="scQs"></div>
+<div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;align-items:center"><button class="btn btn-ghost btn-sm" id="scReset" type="button">Reset answers</button>
+<label for="scCountry" class="muted" style="font-size:.9rem">Report links for</label>
+<select id="scCountry" style="width:auto"><option value="US">United States</option><option value="CA">Canada</option><option value="GB">United Kingdom</option><option value="AU">Australia</option><option value="IN">India</option></select></div>
+</div>
+<div class="aside-sticky">
+<div class="tool result" id="scOut" aria-live="polite"><div id="scGauge" style="text-align:center"></div><div id="scVerdict"></div><div id="scSteps" class="prose" style="margin-top:10px;font-size:.95rem"></div></div>
+<div class="card"><h3>The one rule that beats every scam</h3><p class="muted">Hang up, then contact the person or company using a number <b>you</b> look up. A real bank, agency or relative will still be there in five minutes.</p></div>
+</div>
+</div></section>
+
+<section><div class="wrap prose">
+<h2>Why we score behaviour, not the number</h2>
+<p>The FTC’s reports show phone-initiated scams have the highest median loss of any contact method — thousands of dollars per victim — even though texts and social media reach more people. The reason is pressure: a live voice can push you past your own judgement. That pressure leaves fingerprints, and those are what the checker weighs.</p>
+<h3>The heaviest signals</h3>
+<ul>
+<li><b>Untraceable payment</b> — gift cards, crypto, wire transfers, payment apps or a courier collecting cash. No legitimate agency or company asks for these over the phone.</li>
+<li><b>Reading back a code</b> — one-time passcodes exist so that only you can approve a login or payment. Anyone who asks for one is trying to become you.</li>
+<li><b>Remote access</b> — “tech support” or “bank security” asking you to install AnyDesk, TeamViewer or a similar app.</li>
+<li><b>A loved one in distress</b> — AI voice cloning has turbo-charged the old grandparent scam. Agree a <a href="{{ site.baseurl }}/guides/ai-voice-clone-scams.html">family safe word</a>.</li>
+</ul>
+<h3>If you already paid</h3>
+<p>Speed matters more than anything else. Call your bank or card issuer using the number on the back of your card, report the transaction as fraud, and ask whether it can be recalled. Then report the scam — reports are how agencies spot patterns and how call-blocking apps learn new numbers. Our <a href="{{ site.baseurl }}/guides/report-scam-calls.html">reporting guide</a> lists the right place in each country.</p>
+</div></section>

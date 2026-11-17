@@ -1,0 +1,61 @@
+---
+title: "Phone Number Inspector — Free Lookup of Country, Line Type & Red Flags | 555531"
+description: "Inspect any phone number worldwide: validity, country, region, mobile/landline/VoIP/toll-free type, E.164 format and scam red flags. Free, private, instant."
+vendor: true
+tools: true
+schema: '{"@context":"https://schema.org","@type":"WebApplication","name":"Phone Number Inspector","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free phone number validation, formatting, line-type and red-flag analysis."}'
+---
+<section class="page-hero"><div class="wrap">
+<div class="crumbs"><a href="{{ site.baseurl }}/">Home</a> / Number Inspector</div>
+<span class="eyebrow">Tool · Number Inspector</span>
+<h1>What is this number, really?</h1>
+<p class="lead">Validity, country, region, line type, every standard format and the structural red flags scammers rely on — for any number in the world. Runs privately in your browser.</p>
+</div></section>
+<section style="padding-top:6px"><div class="wrap grid" style="grid-template-columns:minmax(0,1fr);max-width:900px">
+<div class="tool">
+<form id="inspector" autocomplete="off">
+<div class="row" style="grid-template-columns:2fr 1fr">
+<div class="field"><label for="inNum">Phone number (any format)</label><input id="inNum" inputmode="tel" placeholder="+1 (876) 555-0123" required class="mono"></div>
+<div class="field"><label for="inCountry">If no + country code, assume</label><select id="inCountry"></select></div>
+</div>
+<button class="btn btn-amber" type="submit">Inspect number</button>
+<span class="muted" style="font-size:.88rem;margin-left:8px">Try: <button type="button" class="copy" data-sample="+1 900 555 0100">900 premium</button> <button type="button" class="copy" data-sample="+1 876 555 0100">876 Jamaica</button> <button type="button" class="copy" data-sample="(212) 555-0142">555-01XX</button> <button type="button" class="copy" data-sample="+44 7700 900123">UK drama</button> <button type="button" class="copy" data-sample="+91 98765 43210">India mobile</button></span>
+<div id="recent" style="margin-top:14px"></div>
+</form>
+<div class="result" id="inOut" aria-live="polite"></div>
+</div>
+<p class="notice">The Inspector analyses the <b>structure</b> of a number using Google’s open-source numbering data. It cannot see who owns a number, and caller ID can be spoofed — so always judge a call by what the caller asks you to do.</p>
+</div></section>
+
+<section><div class="wrap article-grid">
+<div class="prose">
+<h2>How to read your result</h2>
+<h3>Valid vs. possible</h3>
+<p>A number is <b>possible</b> when it has the right length for its country. It is <b>valid</b> when its prefixes also match a range the national regulator has opened. Spoofed caller IDs are often possible but invalid — the scammer typed random digits that look plausible.</p>
+<h3>Line type</h3>
+<p>Mobile, landline, toll-free, premium-rate, VoIP and shared-cost numbers sit in different prefix ranges. In North America, mobile and landline numbers share the same ranges, so you will see “Landline or mobile”. Elsewhere — the UK, India, Australia and most of Europe — the type is usually exact.</p>
+<ul>
+<li><b>Premium-rate</b> numbers charge the caller a high per-minute rate. Never return an unexpected call to one.</li>
+<li><b>VoIP</b> numbers can be created online in minutes. Plenty of honest businesses use them; so do call centres running scams.</li>
+<li><b>Toll-free</b> numbers are free to dial, but criminals love spoofing them because they look official.</li>
+</ul>
+<h3>The four formats</h3>
+<p><b>E.164</b> (for example <span class="mono">+12125550142</span>) is the global standard used by phone systems, CRMs and SMS platforms — store numbers this way. <b>International</b> adds spaces for humans. <b>National</b> is how locals write it. The <b>RFC 3966</b> link (<span class="mono">tel:+1-212-555-0142</span>) makes a number tappable on websites.</p>
+<h3>North American red flags we check</h3>
+<ul>
+<li><b>555-0100 to 555-0199</b> — reserved for fiction; can never ring a real person.</li>
+<li><b>900 numbers</b> — pay-per-call.</li>
+<li><b>Caribbean and Atlantic codes</b> such as 876 (Jamaica), 809/829/849 (Dominican Republic), 473 (Grenada) or 284 (British Virgin Islands) — they look domestic but are international, which is exactly what one-ring scams exploit.</li>
+<li><b>N11 exchanges</b> like 911 or 411 in the middle of a number — impossible for a real subscriber, a common sign of spoofing.</li>
+<li><b>Unassigned area codes</b> — not in our list of 450 active codes.</li>
+</ul>
+<h2>Number looks fine but the call felt wrong?</h2>
+<p>Trust the feeling. Scammers routinely borrow real, valid numbers — even your own bank’s. Run the <a href="{{ site.baseurl }}/scam-check.html">Scam Call Checker</a>, hang up, and call the organisation back on a number you find yourself.</p>
+<h2>For developers</h2>
+<p>This tool runs on <a href="https://github.com/catamphetamine/libphonenumber-js" target="_blank" rel="noopener">libphonenumber-js</a>, a port of Google’s <a href="https://github.com/google/libphonenumber" target="_blank" rel="noopener">libphonenumber</a>. If you validate phone numbers in a sign-up form, store E.164, validate on the server too, and use our <a href="{{ site.baseurl }}/fictional-numbers.html">safe fictional numbers</a> in test fixtures.</p>
+</div>
+<aside class="aside-sticky">
+<div class="card"><h3>Got a suspicious call?</h3><p class="muted">12 questions, 60 seconds, a clear answer.</p><a class="btn btn-amber btn-block" href="{{ site.baseurl }}/scam-check.html">Run the Scam Check</a></div>
+<div class="card"><h3>Business number?</h3><p class="muted">Get local, toll-free or vanity numbers with branded caller ID.</p><a class="btn btn-ghost btn-block" href="{{ site.baseurl }}/get-quote.html">Compare quotes</a></div>
+</aside>
+</div></section>
