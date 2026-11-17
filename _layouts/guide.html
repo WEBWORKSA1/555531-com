@@ -1,0 +1,23 @@
+---
+layout: default
+article: true
+---
+<section class="page-hero"><div class="wrap">
+<div class="crumbs"><a href="{{ site.baseurl }}/">Home</a> / <a href="{{ site.baseurl }}/guides/">Guides</a> / {{ page.crumb | default: page.h1 }}</div>
+<span class="eyebrow">{{ page.tag }}</span>
+<h1>{{ page.h1 }}</h1>
+<p class="lead">{{ page.lead }}</p>
+</div></section>
+<section style="padding-top:0"><div class="wrap article-grid">
+<article class="prose" id="article">
+<p class="meta">By the 555531 Editorial Team · Updated {{ page.date_mod | default: page.date_pub | date: "%B %-d, %Y" }} · {{ page.read }} min read · <a href="{{ site.baseurl }}/editorial-policy.html">How we research</a></p>
+{{ content }}
+{% if page.sources %}<h2>Sources</h2><ul class="sources">{% for s in page.sources %}<li><a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a></li>{% endfor %}</ul>{% endif %}
+<div class="callout" style="margin-top:30px"><h3>Free: Scam-Proof Family Kit</h3><p class="muted">Safe-word card, one-page hang-up script and the 31-day checklist — printable and free.</p><a class="btn btn-amber btn-sm" href="{{ site.baseurl }}/get-quote.html#kit">Send me the kit</a></div>
+</article>
+<aside class="aside-sticky">
+<div class="card toc" id="toc"><h3>On this page</h3></div>
+<div class="card"><h3>{{ page.cta_title | default: "Check a number now" }}</h3><p class="muted">{{ page.cta_text | default: "See the country, line type and red flags of any number in one second." }}</p><a class="btn btn-amber btn-block" href="{{ site.baseurl }}/{{ page.cta_url | default: 'inspect.html' }}">{{ page.cta_btn | default: "Open the Inspector" }}</a></div>
+<div class="card"><h3>Business line?</h3><p class="muted">Compare VoIP plans with one free request.</p><a class="btn btn-ghost btn-block" href="{{ site.baseurl }}/get-quote.html">Get free quotes</a></div>
+</aside>
+</div></section>
