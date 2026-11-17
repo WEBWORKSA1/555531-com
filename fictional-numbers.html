@@ -1,0 +1,40 @@
+---
+title: "Fake Phone Number Generator — Safe Fictional Numbers for Film, Books & Testing | 555531"
+description: "Generate realistic phone numbers that can never ring a real person: US/Canada 555-01XX, UK Ofcom drama numbers, Ireland and Australia. Copy or export to CSV."
+npa: true
+tools: true
+---
+<section class="page-hero"><div class="wrap">
+<div class="crumbs"><a href="{{ site.baseurl }}/">Home</a> / Safe Fictional Numbers</div>
+<span class="eyebrow">Tool · Fictional numbers</span>
+<h1>Phone numbers that will never ring anyone</h1>
+<p class="lead">For screenwriters, novelists, game designers, UX mock-ups and QA test data. Every number below sits in a range regulators keep out of service for exactly this purpose.</p>
+</div></section>
+<section style="padding-top:6px"><div class="wrap"><div class="tool" id="fictional">
+<div class="row" style="grid-template-columns:1.2fr 1.2fr .6fr .8fr">
+<div class="field"><label for="fgKind">Country / type</label><select id="fgKind"><option value="NANP">US &amp; Canada — 555-01XX</option><option value="UK">UK — Ofcom drama landlines</option><option value="UKM">UK — mobile 07700 900XXX</option><option value="IE">Ireland — 020 91X XXXX</option><option value="AU">Australia — ACMA fiction numbers</option></select></div>
+<div class="field"><label for="fgOpt" id="fgOptL">Area code</label><select id="fgOpt"></select></div>
+<div class="field"><label for="fgCount">How many</label><input id="fgCount" type="number" min="1" max="50" value="12"></div>
+<div class="field"><label for="fgFmt">Format</label><select id="fgFmt"><option value="nat">Human-readable</option><option value="e164">E.164 (+…)</option></select></div>
+</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-amber" id="fgGo" type="button">Generate</button><button class="btn btn-ghost" id="fgCopy" type="button">Copy all</button><button class="btn btn-ghost" id="fgCsv" type="button">Export CSV</button></div>
+<div class="numlist" id="fgList" aria-live="polite"></div>
+<p class="muted" style="font-size:.86rem;margin-top:12px">Click any number to copy it.</p>
+</div></div></section>
+<section><div class="wrap prose">
+<h2>The reserved ranges, and where they come from</h2>
+<h3>United States and Canada: 555-0100 to 555-0199</h3>
+<p>Hollywood has used the 555 exchange since the early 1960s because the letters on the 5 key — J, K, L — matched almost no real exchange names. In the 1990s most of the 555 exchange was opened for real services, and today only <span class="mono">555-0100</span> through <span class="mono">555-0199</span> remain reserved for fiction in every North American area code. A number like <span class="mono">555-2368</span> may look fake, but it is not protected.</p>
+<h3>United Kingdom: Ofcom drama numbers</h3>
+<p>Ofcom keeps 1,000-number blocks for TV and radio drama in major cities — for example London <span class="mono">020 7946 0000–0999</span>, Manchester <span class="mono">0161 496 0000–0999</span> and Glasgow <span class="mono">0141 496 0000–0999</span> — plus the area-less <span class="mono">01632 960000–960999</span>, and <span class="mono">07700 900000–900999</span> for mobiles.</p>
+<h3>Ireland and Australia</h3>
+<p>Ireland’s regulator ComReg reserves <span class="mono">020 91X XXXX</span> for drama use. Australia’s ACMA publishes a specific list of mobile and 1800 numbers for creative works.</p>
+<h2>Using fictional numbers in software</h2>
+<ul>
+<li>Seed staging databases and screenshots with these numbers so no real customer ever receives a test SMS.</li>
+<li>Note that strict validators (including Google’s libphonenumber) may mark some fiction-only numbers as invalid — that is a feature for production, so mock validation in unit tests.</li>
+<li>Store numbers in E.164 and keep test data clearly labelled.</li>
+</ul>
+<h2>Writers: avoid the “Jenny” problem</h2>
+<p>When a real number appears on screen or in a book, its owner gets the calls. Productions have had to re-dub scenes and pay for number changes after using live numbers. Using a reserved range costs nothing and removes the risk.</p>
+</div></section>
